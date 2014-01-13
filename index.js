@@ -7,10 +7,7 @@
  */
 
 module.exports = function(el){
-  var dummy = document.createElement('div');
-  // todo, sanitize?
-  dummy.innerHTML = el.innerHTML;
-  var children = dummy.childNodes;
+  var children = el.childNodes;
   var fragment = document.createDocumentFragment();
   for (var i = 0; i < children.length; i++){
     fragment.appendChild(children[i]);
