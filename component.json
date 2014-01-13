@@ -1,0 +1,14 @@
+{
+  "name": "strip-tag",
+  "repo": "bmcmahen/strip-tag",
+  "description": "strip a tag from html while maintaining the element's contents",
+  "version": "0.0.1",
+  "keywords": ["strip", "tags"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
