@@ -9,9 +9,13 @@
 module.exports = function(el){
   var node = el.firstChild;
   var fragment = document.createDocumentFragment();
+  var currentNode;
+
   while (node) {
-    fragment.appendChild(node.cloneNode());
+    currentNode = node;
     node = node.nextSibling;
+    fragment.appendChild(currentNode);
   }
+
   el.parentNode.replaceChild(fragment, el);
 };
