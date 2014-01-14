@@ -10,7 +10,7 @@ module.exports = function(el){
   var children = el.childNodes;
   var fragment = document.createDocumentFragment();
   for (var i = 0; i < children.length; i++){
-    fragment.appendChild(children[i]);
+    fragment.appendChild(children[i].cloneNode());
   }
   el.parentNode.replaceChild(fragment, el);
 };
