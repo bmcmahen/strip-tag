@@ -7,10 +7,11 @@
  */
 
 module.exports = function(el){
-  var children = el.childNodes;
+  var node = el.firstChild;
   var fragment = document.createDocumentFragment();
-  for (var i = 0; i < children.length; i++){
-    fragment.appendChild(children[i].cloneNode());
+  while (node) {
+    fragment.appendChild(node.cloneNode());
+    node = node.nextSibling;
   }
   el.parentNode.replaceChild(fragment, el);
 };
